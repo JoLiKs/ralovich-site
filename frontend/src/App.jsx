@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { content, GA_ID } from './data/content.js'
 import './App.css'
 
-const filterKeys = ['all', 'bots', 'automation', 'sites']
+const filterKeys = ['all', 'saas', 'automation']
 
 function App() {
   const [lang, setLang] = useState(() => localStorage.getItem('preferred-language') || 'ru')
@@ -152,15 +152,15 @@ function App() {
             <div className="code-window">
               <div className="window-header">
                 <div className="window-buttons"><span className="btn-close" /><span className="btn-minimize" /><span className="btn-maximize" /></div>
-                <div className="window-title">bot.py</div>
+                <div className="window-title">main.py</div>
               </div>
               <div className="window-content">
-                <div className="code-line"><span className="code-keyword">from</span> <span className="code-module">aiogram</span> <span className="code-keyword">import</span> <span className="code-class">Bot</span>, <span className="code-class">Dispatcher</span>, <span className="code-class">F</span></div>
-                <div className="code-line"><span className="code-variable">bot</span> <span className="code-dot">=</span> <span className="code-class">Bot</span><span className="code-bracket">(</span><span className="code-param">token</span><span className="code-dot">=</span><span className="code-string">"..."</span><span className="code-bracket">)</span></div>
-                <div className="code-line"><span className="code-variable">dp</span> <span className="code-dot">=</span> <span className="code-class">Dispatcher</span><span className="code-bracket">()</span></div>
-                <div className="code-line"><span className="code-deccorator">@dp.message</span><span className="code-bracket">(</span><span className="code-class">F</span><span className="code-dot">.</span><span className="code-param">text</span> <span className="code-dot">==</span> <span className="code-string">"/start"</span><span className="code-bracket">)</span></div>
-                <div className="code-line"><span className="code-keyword">async def</span> <span className="code-function">start</span><span className="code-bracket">(</span><span className="code-param">message</span><span className="code-bracket">):</span></div>
-                <div className="code-line code-indent"><span className="code-keyword">await</span> <span className="code-variable">message</span><span className="code-dot">.</span><span className="code-method">answer</span><span className="code-bracket">(</span><span className="code-string">"Привет!"</span><span className="code-bracket">)</span></div>
+                <div className="code-line"><span className="code-keyword">from</span> <span className="code-module">fastapi</span> <span className="code-keyword">import</span> <span className="code-class">FastAPI</span></div>
+                <div className="code-line"><span className="code-variable">app</span> <span className="code-dot">=</span> <span className="code-class">FastAPI</span><span className="code-bracket">()</span></div>
+                <div className="code-line"><span className="code-deccorator">@app.post</span><span className="code-bracket">(</span><span className="code-string">"/api/orders"</span><span className="code-bracket">)</span></div>
+                <div className="code-line"><span className="code-keyword">async def</span> <span className="code-function">create_order</span><span className="code-bracket">(</span><span className="code-param">order</span><span className="code-dot">:</span> <span className="code-class">OrderIn</span><span className="code-bracket">):</span></div>
+                <div className="code-line code-indent"><span className="code-variable">saved</span> <span className="code-dot">=</span> <span className="code-keyword">await</span> <span className="code-variable">repo</span><span className="code-dot">.</span><span className="code-method">add</span><span className="code-bracket">(</span><span className="code-param">order</span><span className="code-bracket">)</span></div>
+                <div className="code-line code-indent"><span className="code-keyword">return</span> <span className="code-bracket">{"{"}</span><span className="code-string">"id"</span><span className="code-dot">:</span> <span className="code-variable">saved</span><span className="code-dot">.</span><span className="code-param">id</span><span className="code-bracket">{"}"}</span></div>
               </div>
             </div>
           </motion.div>
@@ -205,13 +205,17 @@ function App() {
             {portfolioItems.map((item, index) => (
               <motion.article key={item.title} className={`portfolio-item ${index < 3 ? 'featured' : ''}`} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                 <div className="portfolio-image">
-                  {index < 3 && <span className="portfolio-badge">Featured</span>}
+                  {index < 3 && <span className="portfolio-badge">{t.portfolio.labels.featured}</span>}
                   <span>{item.icon}</span>
                 </div>
                 <div className="portfolio-content">
                   <h3 className="portfolio-title">{item.title}</h3>
-                  <p className="portfolio-description">{item.description}</p>
+                  <p className="portfolio-description"><strong className="portfolio-label">{t.portfolio.labels.problem}:</strong> {item.problem}</p>
+                  <p className="portfolio-description"><strong className="portfolio-label">{t.portfolio.labels.solution}:</strong> {item.solution}</p>
+                  <ul className="portfolio-features">{item.features.map((f) => <li key={f}>{f}</li>)}</ul>
                   <div className="portfolio-technologies">{item.technologies.map((tech) => <span className="tech-tag" key={tech}>{tech}</span>)}</div>
+                  {item.liveLink && <a className="btn btn-primary portfolio-live" href={item.liveLink} target="_blank" rel="noreferrer">{t.portfolio.labels.live} ↗</a>}
+                  {item.link && <a className="portfolio-link" href={item.link} target="_blank" rel="noreferrer">{t.portfolio.labels.link} →</a>}
                 </div>
               </motion.article>
             ))}

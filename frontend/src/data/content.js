@@ -13,7 +13,7 @@ export const content = {
       title2: 'умные решения',
       title3: 'для вашего бизнеса',
       subtitle:
-        'Разработка Telegram ботов, скриптов автоматизации и современных веб-сайтов. Превращаю ваши идеи в работающие цифровые продукты.',
+        'Разрабатываю SaaS-платформы, backend и API, автоматизацию и мобильные приложения. Превращаю ваши идеи в работающие цифровые продукты.',
       ctaPrimary: 'Обсудить проект',
       ctaSecondary: 'Мои работы',
       stats: [
@@ -23,131 +23,226 @@ export const content = {
       ],
     },
     services: {
-      title: 'Мои услуги',
-      subtitle: 'Комплексные решения для автоматизации и развития вашего бизнеса',
-      items: [
+      "title": "Мои услуги",
+      "subtitle": "Backend, SaaS и автоматизация — от идеи до работающего продукта",
+      "items": [
         {
-          icon: '🤖',
-          title: 'Telegram боты',
-          description:
-            'Создание умных ботов для автоматизации бизнес-процессов, интеграции с API, обработки заказов и поддержки клиентов.',
-          features: [
-            'Интеграция с CRM системами',
-            'Автоматизация продаж',
-            'Система уведомлений',
-            'Аналитика и отчетность',
+          "icon": "🚀",
+          "title": "SaaS-проекты",
+          "description": "Полный цикл разработки SaaS: от идеи и MVP до продукта, который готов принимать пользователей и расти.",
+          "features": [
+            "Идея, прототип и MVP",
+            "Backend и REST API",
+            "Админ-панель и личные кабинеты",
+            "Авторизация, роли и права доступа",
+            "Интеграция оплат и подписок",
+            "Деплой, мониторинг и масштабирование"
           ],
-          price: 'от 300 BYN (7500 ₽)',
-          featured: true,
-          badge: 'Популярно',
+          "price": "от 2600 BYN (63 000 ₽)",
+          "featured": true,
+          "badge": "Популярно"
         },
         {
-          icon: '⚡',
-          title: 'Скрипты автоматизации',
-          description:
-            'Разработка Python-скриптов для автоматизации рутинных задач, парсинга данных, мониторинга и интеграции систем.',
-          features: [
-            'Парсинг веб-сайтов',
-            'Автоматизация отчетов',
-            'Мониторинг систем',
-            'Интеграция API',
+          "icon": "⚡",
+          "title": "Скрипты автоматизации",
+          "description": "Python-скрипты и сервисы для рутинных задач: парсинг, мониторинг, интеграции и автоматизация действий в браузере.",
+          "features": [
+            "Парсинг веб-сайтов и API",
+            "Мониторинг цен и сервисов",
+            "Автоматизация в браузере",
+            "Интеграция API"
           ],
-          price: 'от 600 BYN (14500 ₽)',
+          "price": "от 600 BYN (14500 ₽)"
         },
         {
-          icon: '🌐',
-          title: 'Веб-сайты',
-          description:
-            'Создание современных адаптивных веб-сайтов с сильным дизайном, оптимизированных для конверсии и поисковых систем.',
-          features: [
-            'Адаптивный дизайн',
-            'SEO оптимизация',
-            'Быстрая загрузка',
-            'Современные технологии',
+          "icon": "📱",
+          "title": "Мобильные приложения на Flutter",
+          "description": "Приложения под Android и iOS из одного кода — в связке с вашим backend и админкой.",
+          "features": [
+            "Один код — Android и iOS",
+            "Работа с GPS и камерой",
+            "Офлайн-режим и синхронизация",
+            "Push-уведомления (FCM)"
           ],
-          price: 'от 2600 BYN (63 000 ₽)',
-        },
-      ],
+          "price": "по запросу"
+        }
+      ]
     },
     portfolio: {
-      title: 'Портфолио',
-      subtitle: 'Примеры реализованных проектов',
-      filters: {
-        all: 'Все проекты',
-        bots: 'Боты',
-        automation: 'Автоматизация',
-        sites: 'Сайты',
+      "title": "Портфолио",
+      "subtitle": "Реальные проекты: задача → решение → стек",
+      "filters": {
+        "all": "Все проекты",
+        "saas": "SaaS и платформы",
+        "automation": "Автоматизация"
       },
-      items: [
+      "labels": {
+        "problem": "Задача",
+        "solution": "Решение",
+        "features": "Что умеет",
+        "link": "Код на GitHub",
+        "live": "Открыть тренажёр",
+        "featured": "Избранное"
+      },
+      "items": [
+          {
+            "icon": "🚚",
+            "title": "Платформа для службы доставки",
+            "category": "saas",
+            "problem": "Службе доставки нужна единая система для приёма заказов, управления курьерами и отслеживания доставок.",
+            "solution": "Backend с API и фоновыми задачами, панель диспетчера, админ-панель и мобильное приложение курьера на Flutter.",
+            "features": [
+              "Приложение курьера: смены, список заказов, скан штрихкода, фото и подпись при вручении",
+              "GPS-трекинг курьеров с офлайн-буфером на случай потери сети",
+              "Управление заказами и курьерами, статусы доставки",
+              "Админ-панель: настройки интеграций (SMS, push, хранилище файлов)",
+              "Публичная страница отслеживания заказа для получателя"
+            ],
+            "technologies": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL",
+              "Flutter",
+              "Docker"
+            ]
+          },
         {
-          icon: '📚',
-          title: 'Book Writer Bot',
-          description:
-            'AI backend для генерации книг. Telegram-бот с мультипровайдерной интеграцией LLM (OpenAI, Anthropic, Gemini, DeepSeek), абстракцией провайдеров, генерацией EPUB, SQLite и admin-панелью. Деплой как systemd-сервис на Linux VPS.',
-          technologies: ['Python', 'aiogram', 'OpenAI', 'Anthropic', 'Gemini', 'DeepSeek', 'SQLite', 'EPUB'],
-          category: 'bots',
+          "icon": "🎤",
+          "title": "Тренажёр по собеседованиям",
+          "category": "saas",
+          "problem": "Подготовиться к техническому собеседованию сложно без живой практики с интервьюером.",
+          "solution": "Веб-симулятор технического интервью: диалог с AI-рекрутером по выбранному стеку и грейду с вердиктом в конце.",
+          "features": [
+            "Выбор языка (RU / EN), стека и грейда — от Intern до Lead",
+            "Живой диалог с AI-рекрутером через Cursor API",
+            "Итоговый вердикт HIRE / REJECT",
+            "Админка: ключ API, список сессий, блокировка по IP"
+          ],
+          "technologies": [
+            "Python",
+            "Flask",
+            "Cursor API",
+            "JavaScript",
+            "Gunicorn",
+            "nginx"
+          ],
+          "link": "https://github.com/JoLiKs/Conversations",
+          "liveLink": "https://ralovich.com/conversation/"
         },
         {
-          icon: '🛠️',
-          title: 'Dev Orchestrator',
-          description:
-            'Telegram-оркестратор разработки и деплоя: GitHub (PR, issues, commits), Cursor API, удалённое управление серверами через asyncssh. Модульная архитектура services/handlers, YAML-конфиг серверов, автоматический git pull + restart.',
-          technologies: ['Python', 'aiogram', 'GitHub API', 'asyncssh', 'YAML', 'Cursor API'],
-          category: 'automation',
+          "icon": "🌱",
+          "title": "«Второй старт» — HR-платформа",
+          "category": "saas",
+          "problem": "Людям после длительного перерыва (декрет, уход за близкими, лечение) трудно вернуться на рынок труда, а работодателям — найти таких кандидатов.",
+          "solution": "Платформа с кабинетами соискателя и рекрутера: вакансии, отклики, интервью и воронка найма в одном сервисе.",
+          "features": [
+            "Регистрация, вход и восстановление пароля (JWT)",
+            "Профиль с опытом, перерывом, навыками и резюме PDF",
+            "Каталог вакансий с фильтрами и меткой return-friendly",
+            "Kanban-воронка с drag-and-drop и назначение интервью"
+          ],
+          "technologies": [
+            "FastAPI",
+            "SQLAlchemy",
+            "PostgreSQL",
+            "React",
+            "Vite",
+            "Docker Compose"
+          ],
+          "link": "https://github.com/JoLiKs/vtoroy-start"
         },
         {
-          icon: '🦆',
-          title: 'MyDuck Bot',
-          description:
-            'Высоконагруженная автоматизация игрового API на Telethon + REST: мониторинг событий, автоматические действия, панель управления. Оптимизация сетевых запросов и управление сессиями.',
-          technologies: ['Python', 'Telethon', 'REST API', 'asyncio', 'SQLite'],
-          category: 'automation',
+          "icon": "🛠️",
+          "title": "Dev Orchestrator",
+          "category": "automation",
+          "problem": "Работа с репозиториями, правками кода и деплоем на разные серверы требовала переключения между множеством инструментов.",
+          "solution": "Единая точка управления разработкой и деплоем: GitHub, Cursor API и серверы по SSH, с управлением из Telegram.",
+          "features": [
+            "Репозитории, PR, issues и коммиты GitHub",
+            "Запуск Cursor-агента для правок кода в репозитории",
+            "Деплой по SSH: git pull + перезапуск сервиса",
+            "YAML-конфиг серверов, whitelist пользователей"
+          ],
+          "technologies": [
+            "Python",
+            "asyncssh",
+            "PyGithub",
+            "Cursor API",
+            "YAML",
+            "systemd"
+          ]
         },
         {
-          icon: '🤖',
-          title: 'Бот для интернет-магазина',
-          description: 'Автоматизация обработки заказов и поддержки клиентов с интеграцией в бизнес-процессы магазина.',
-          technologies: ['Python', 'Telegram API', 'PostgreSQL'],
-          category: 'bots',
+          "icon": "📊",
+          "title": "Crypto Arbitrage Finder",
+          "category": "automation",
+          "problem": "Нужно быстро сравнивать цены криптовалют на разных биржах и видеть арбитражные возможности.",
+          "solution": "Асинхронное Python-приложение, которое собирает цены с бирж (Binance, Coinbase) и показывает спреды.",
+          "features": [
+            "Асинхронные запросы через httpx",
+            "Валидация ответов через Pydantic",
+            "Retry-логика и LRU-кеш",
+            "CLI на Typer и веб-интерфейс на FastAPI",
+            "Юнит-тесты на pytest"
+          ],
+          "technologies": [
+            "Python",
+            "asyncio",
+            "httpx",
+            "FastAPI",
+            "Pydantic",
+            "Typer"
+          ],
+          "link": "https://github.com/JoLiKs/Crypto-Arbitrage-Finder"
         },
         {
-          icon: '📊',
-          title: 'Система мониторинга цен',
-          description: 'Автоматический парсинг и анализ цен конкурентов с уведомлениями и отчётами.',
-          technologies: ['Python', 'Selenium', 'BeautifulSoup'],
-          category: 'automation',
+          "icon": "📈",
+          "title": "PulseWatch — мониторинг доступности",
+          "category": "automation",
+          "problem": "Нужно регулярно проверять доступность HTTP-сервисов и считать SLA.",
+          "solution": "Асинхронный монитор: параллельные проверки эндпоинтов и отчёты по SLA.",
+          "features": [
+            "Параллельные проверки с настраиваемой конкурентностью",
+            "Повторы с экспоненциальной задержкой",
+            "Аптайм, задержки p50/p95/p99, доля ошибок",
+            "Дашборд в терминале, экспорт в JSON/CSV"
+          ],
+          "technologies": [
+            "Python",
+            "asyncio",
+            "YAML",
+            "pytest"
+          ],
+          "link": "https://github.com/JoLiKs/pulsewatch"
         },
         {
-          icon: '💄',
-          title: 'CRM бот для салона красоты',
-          description: 'Запись клиентов, напоминания, управление расписанием и админ-панель для персонала.',
-          technologies: ['Python', 'aiogram', 'Redis'],
-          category: 'bots',
-        },
-        {
-          icon: '🌐',
-          title: 'Корпоративный сайт',
-          description: 'Современный адаптивный сайт с анимациями, SEO и быстрой загрузкой.',
-          technologies: ['HTML/CSS', 'JavaScript', 'GSAP'],
-          category: 'sites',
-        },
-        {
-          icon: '📈',
-          title: 'Автоматизация действий в браузере',
-          description: 'Выполнение сценариев в браузере: отправка сообщений, заполнение форм и другие задачи.',
-          technologies: ['Python', 'Selenium'],
-          category: 'automation',
-        },
-      ],
+          "icon": "🌐",
+          "title": "Автоматизация действий в браузере",
+          "category": "automation",
+          "problem": "Ответы на входящие сообщения на площадке объявлений отнимали время вручную.",
+          "solution": "Скрипт, который сам заходит в аккаунт, находит непрочитанные чаты и отвечает в них.",
+          "features": [
+            "Вход по сохранённым cookies",
+            "Поиск непрочитанных чатов",
+            "Человекоподобный ввод и прокрутка",
+            "undetected-chromedriver"
+          ],
+          "technologies": [
+            "Python",
+            "Selenium",
+            "undetected-chromedriver"
+          ]
+        }
+      ]
     },
     about: {
       title: 'Обо мне',
       description:
-        'Привет! Я Егор Ралович — разработчик с более чем 5-летним опытом создания цифровых решений. Специализируюсь на разработке Telegram ботов, автоматизации бизнес-процессов и создании современных веб-сайтов.',
+        'Привет! Я Егор Ралович — разработчик с более чем 5-летним опытом создания цифровых решений. Специализируюсь на backend-разработке, SaaS-платформах и автоматизации бизнес-процессов.',
       description2:
         'Моя цель — помочь вашему бизнесу стать более эффективным через умную автоматизацию и качественные цифровые продукты. Каждый проект для меня — это возможность создать что-то действительно полезное и красивое.',
       skillsTitle: 'Технологии, которые я использую:',
-      skills: ['Python', 'aiogram', 'Telethon', 'asyncio', 'FastAPI', 'Telegram API', 'JavaScript', 'React', 'HTML/CSS', 'PostgreSQL', 'SQLite', 'Redis', 'Selenium'],
+      skills: ['Python', 'FastAPI', 'Flask', 'asyncio', 'Node.js', 'TypeScript', 'React', 'Flutter', 'PostgreSQL', 'SQLAlchemy', 'Docker', 'Selenium', 'Playwright'],
     },
     contact: {
       title: 'Готовы начать проект?',
@@ -162,9 +257,9 @@ export const content = {
         submit: 'Отправить заявку',
         serviceOptions: [
           'Выберите услугу',
-          'Telegram бот',
+          'SaaS-проект',
           'Скрипт автоматизации',
-          'Веб-сайт',
+          'Мобильное приложение',
           'Консультация',
         ],
       },
@@ -187,7 +282,7 @@ export const content = {
       title2: 'smart solutions',
       title3: 'for your business',
       subtitle:
-        'Development of Telegram bots, automation scripts and modern websites. I turn your ideas into working digital products.',
+        'I build SaaS platforms, backends and APIs, automation and mobile apps. I turn your ideas into working digital products.',
       ctaPrimary: 'Discuss project',
       ctaSecondary: 'My work',
       stats: [
@@ -197,116 +292,226 @@ export const content = {
       ],
     },
     services: {
-      title: 'My services',
-      subtitle: 'Comprehensive solutions for automation and business growth',
-      items: [
+      "title": "My services",
+      "subtitle": "Backend, SaaS and automation — from idea to a working product",
+      "items": [
         {
-          icon: '🤖',
-          title: 'Telegram Bots',
-          description:
-            'Smart bots for business automation, API integrations, order processing and customer support.',
-          features: ['CRM integrations', 'Sales automation', 'Notification system', 'Analytics and reporting'],
-          price: 'from $100',
-          featured: true,
-          badge: 'Popular',
+          "icon": "🚀",
+          "title": "SaaS projects",
+          "description": "Full-cycle SaaS development: from idea and MVP to a product ready to onboard users and grow.",
+          "features": [
+            "Idea, prototype and MVP",
+            "Backend and REST API",
+            "Admin panel and user dashboards",
+            "Auth, roles and permissions",
+            "Payments and subscriptions",
+            "Deploy, monitoring and scaling"
+          ],
+          "price": "from $860",
+          "featured": true,
+          "badge": "Popular"
         },
         {
-          icon: '⚡',
-          title: 'Automation scripts',
-          description:
-            'Python scripts for routine tasks, data parsing, monitoring and system integrations.',
-          features: ['Web scraping', 'Report automation', 'System monitoring', 'API integration'],
-          price: 'from $200',
+          "icon": "⚡",
+          "title": "Automation scripts",
+          "description": "Python scripts and services for routine work: scraping, monitoring, integrations and browser automation.",
+          "features": [
+            "Website and API scraping",
+            "Price and service monitoring",
+            "Browser automation",
+            "API integration"
+          ],
+          "price": "from $200"
         },
         {
-          icon: '🌐',
-          title: 'Websites',
-          description:
-            'Modern responsive websites with strong design, optimized for conversion and search engines.',
-          features: ['Responsive design', 'SEO optimization', 'Fast loading', 'Modern stack'],
-          price: 'from $860',
-        },
-      ],
+          "icon": "📱",
+          "title": "Flutter mobile apps",
+          "description": "Android and iOS apps from a single codebase, connected to your backend and admin panel.",
+          "features": [
+            "One codebase for Android and iOS",
+            "GPS and camera",
+            "Offline mode and sync",
+            "Push notifications (FCM)"
+          ],
+          "price": "on request"
+        }
+      ]
     },
     portfolio: {
-      title: 'Portfolio',
-      subtitle: 'Selected delivered projects',
-      filters: {
-        all: 'All projects',
-        bots: 'Bots',
-        automation: 'Automation',
-        sites: 'Sites',
+      "title": "Portfolio",
+      "subtitle": "Real projects: problem → solution → stack",
+      "filters": {
+        "all": "All projects",
+        "saas": "SaaS & platforms",
+        "automation": "Automation"
       },
-      items: [
+      "labels": {
+        "problem": "Problem",
+        "solution": "Solution",
+        "features": "Features",
+        "link": "Code on GitHub",
+        "live": "Open trainer",
+        "featured": "Featured"
+      },
+      "items": [
+          {
+            "icon": "🚚",
+            "title": "Delivery service platform",
+            "category": "saas",
+            "problem": "A delivery service needed one system for order intake, courier management and delivery tracking.",
+            "solution": "A backend with an API and background jobs, a dispatcher panel, an admin panel and a Flutter courier app.",
+            "features": [
+              "Courier app: shifts, order list, barcode scan, photo and signature on delivery",
+              "Courier GPS tracking with an offline buffer for network loss",
+              "Order and courier management, delivery statuses",
+              "Admin panel: integration settings (SMS, push, file storage)",
+              "Public order tracking page for the recipient"
+            ],
+            "technologies": [
+              "Node.js",
+              "TypeScript",
+              "PostgreSQL",
+              "Flutter",
+              "Docker"
+            ]
+          },
         {
-          icon: '📚',
-          title: 'Book Writer Bot',
-          description:
-            'AI backend for book generation. Telegram bot with multi-provider LLM integration (OpenAI, Anthropic, Gemini, DeepSeek), provider abstraction, EPUB export, SQLite and admin panel. Deployed as a systemd service on Linux VPS.',
-          technologies: ['Python', 'aiogram', 'OpenAI', 'Anthropic', 'Gemini', 'DeepSeek', 'SQLite', 'EPUB'],
-          category: 'bots',
+          "icon": "🎤",
+          "title": "Interview trainer",
+          "category": "saas",
+          "problem": "Preparing for a technical interview is hard without live practice with an interviewer.",
+          "solution": "A web simulator of a technical interview: a dialogue with an AI recruiter for the chosen stack and level, with a verdict at the end.",
+          "features": [
+            "Language (RU / EN), stack and level — from Intern to Lead",
+            "Live dialogue with an AI recruiter via Cursor API",
+            "Final verdict: HIRE / REJECT",
+            "Admin: API key, session list, IP blocking"
+          ],
+          "technologies": [
+            "Python",
+            "Flask",
+            "Cursor API",
+            "JavaScript",
+            "Gunicorn",
+            "nginx"
+          ],
+          "link": "https://github.com/JoLiKs/Conversations",
+          "liveLink": "https://ralovich.com/conversation/"
         },
         {
-          icon: '🛠️',
-          title: 'Dev Orchestrator',
-          description:
-            'Telegram orchestrator for development and deployment: GitHub (PR, issues, commits), Cursor API, remote server management via asyncssh. Modular services/handlers architecture, YAML server config, automatic git pull + restart.',
-          technologies: ['Python', 'aiogram', 'GitHub API', 'asyncssh', 'YAML', 'Cursor API'],
-          category: 'automation',
+          "icon": "🌱",
+          "title": "“Second Start” — HR platform",
+          "category": "saas",
+          "problem": "People returning after a long break (parental leave, caregiving, treatment) struggle to re-enter the job market, and employers struggle to find them.",
+          "solution": "A platform with candidate and recruiter dashboards: vacancies, applications, interviews and hiring funnel in one service.",
+          "features": [
+            "Sign-up, login and password reset (JWT)",
+            "Profile with experience, career break, skills and PDF resume",
+            "Vacancy catalog with filters and a return-friendly tag",
+            "Kanban funnel with drag-and-drop and interview scheduling"
+          ],
+          "technologies": [
+            "FastAPI",
+            "SQLAlchemy",
+            "PostgreSQL",
+            "React",
+            "Vite",
+            "Docker Compose"
+          ],
+          "link": "https://github.com/JoLiKs/vtoroy-start"
         },
         {
-          icon: '🦆',
-          title: 'MyDuck Bot',
-          description:
-            'High-load game API automation with Telethon + REST: event monitoring, automated actions, control panel. Network request optimization and session management.',
-          technologies: ['Python', 'Telethon', 'REST API', 'asyncio', 'SQLite'],
-          category: 'automation',
+          "icon": "🛠️",
+          "title": "Dev Orchestrator",
+          "category": "automation",
+          "problem": "Working with repos, code changes and deploys to several servers meant switching between many tools.",
+          "solution": "A single control point for development and deployment: GitHub, Cursor API and servers over SSH, controlled from Telegram.",
+          "features": [
+            "GitHub repos, PRs, issues and commits",
+            "Run a Cursor agent to change code in a repo",
+            "SSH deploy: git pull + service restart",
+            "YAML server config, user whitelist"
+          ],
+          "technologies": [
+            "Python",
+            "asyncssh",
+            "PyGithub",
+            "Cursor API",
+            "YAML",
+            "systemd"
+          ]
         },
         {
-          icon: '🤖',
-          title: 'E-commerce Bot',
-          description: 'Order processing automation and customer support for an online store.',
-          technologies: ['Python', 'Telegram API', 'PostgreSQL'],
-          category: 'bots',
+          "icon": "📊",
+          "title": "Crypto Arbitrage Finder",
+          "category": "automation",
+          "problem": "Quickly compare crypto prices across exchanges and spot arbitrage opportunities.",
+          "solution": "An async Python app that collects prices from exchanges (Binance, Coinbase) and shows spreads.",
+          "features": [
+            "Async requests via httpx",
+            "Response validation with Pydantic",
+            "Retry logic and LRU cache",
+            "Typer CLI and FastAPI web UI",
+            "pytest unit tests"
+          ],
+          "technologies": [
+            "Python",
+            "asyncio",
+            "httpx",
+            "FastAPI",
+            "Pydantic",
+            "Typer"
+          ],
+          "link": "https://github.com/JoLiKs/Crypto-Arbitrage-Finder"
         },
         {
-          icon: '📊',
-          title: 'Price Monitoring System',
-          description: 'Automated competitor price parsing and analysis with alerts and reports.',
-          technologies: ['Python', 'Selenium', 'BeautifulSoup'],
-          category: 'automation',
+          "icon": "📈",
+          "title": "PulseWatch — uptime monitoring",
+          "category": "automation",
+          "problem": "HTTP services need regular availability checks and SLA calculation.",
+          "solution": "An async monitor: concurrent endpoint checks and SLA reports.",
+          "features": [
+            "Concurrent checks with configurable concurrency",
+            "Exponential backoff retries",
+            "Uptime, p50/p95/p99 latency, error rate",
+            "Terminal dashboard, JSON/CSV export"
+          ],
+          "technologies": [
+            "Python",
+            "asyncio",
+            "YAML",
+            "pytest"
+          ],
+          "link": "https://github.com/JoLiKs/pulsewatch"
         },
         {
-          icon: '💄',
-          title: 'Beauty Salon CRM Bot',
-          description: 'Client booking, reminders, schedule management and admin panel.',
-          technologies: ['Python', 'aiogram', 'Redis'],
-          category: 'bots',
-        },
-        {
-          icon: '🌐',
-          title: 'Corporate Website',
-          description: 'Modern responsive website with animations, SEO and fast loading.',
-          technologies: ['HTML/CSS', 'JavaScript', 'GSAP'],
-          category: 'sites',
-        },
-        {
-          icon: '📈',
-          title: 'Browser Automation',
-          description: 'Browser scenario execution: messaging, form filling and repetitive workflows.',
-          technologies: ['Python', 'Selenium'],
-          category: 'automation',
-        },
-      ],
+          "icon": "🌐",
+          "title": "Browser automation",
+          "category": "automation",
+          "problem": "Replying to incoming messages on a classifieds site took manual time.",
+          "solution": "A script that logs in, finds unread chats and replies to them.",
+          "features": [
+            "Login via saved cookies",
+            "Finding unread chats",
+            "Human-like typing and scrolling",
+            "undetected-chromedriver"
+          ],
+          "technologies": [
+            "Python",
+            "Selenium",
+            "undetected-chromedriver"
+          ]
+        }
+      ]
     },
     about: {
       title: 'About me',
       description:
-        'Hi! I am Egor Ralovich — a developer with 5+ years of experience building digital products. I specialize in Telegram bots, business automation and modern websites.',
+        'Hi! I am Egor Ralovich — a developer with 5+ years of experience building digital products. I specialize in backend development, SaaS platforms and business automation.',
       description2:
         'My goal is to make your business more efficient through smart automation and high-quality software. Every project is a chance to build something truly useful and polished.',
       skillsTitle: 'Technologies I use:',
-      skills: ['Python', 'aiogram', 'Telethon', 'asyncio', 'FastAPI', 'Telegram API', 'JavaScript', 'React', 'HTML/CSS', 'PostgreSQL', 'SQLite', 'Redis', 'Selenium'],
+      skills: ['Python', 'FastAPI', 'Flask', 'asyncio', 'Node.js', 'TypeScript', 'React', 'Flutter', 'PostgreSQL', 'SQLAlchemy', 'Docker', 'Selenium', 'Playwright'],
     },
     contact: {
       title: 'Ready to start a project?',
@@ -319,7 +524,7 @@ export const content = {
         service: 'Service type',
         message: 'Project description',
         submit: 'Send request',
-        serviceOptions: ['Select service', 'Telegram bot', 'Automation script', 'Website', 'Consultation'],
+        serviceOptions: ['Select service', 'SaaS project', 'Automation script', 'Mobile app', 'Consultation'],
       },
       success: 'Thank you! Your message has been sent.',
       error: 'Sending failed. Please try later or message me on Telegram.',

@@ -264,3 +264,5 @@
 }
 
 .skills-tags{margin-top:1rem;gap:.6rem}.skills-tags .tech-tag{font-size:.9rem;padding:.4rem .9rem}
+.portfolio-label{color:var(--text-light);font-weight:600}.portfolio-features{color:var(--text-muted);font-size:.9rem;line-height:1.5;margin:0 0 1rem 1.1rem}.portfolio-features li{margin-bottom:.3rem}.portfolio-link{display:inline-block;margin-top:1rem;color:var(--primary-color);font-weight:600;text-decoration:none}.portfolio-link:hover{color:#fff}
+.portfolio-live{display:flex;width:100%;margin-top:1rem;padding:.75rem 1.25rem}
