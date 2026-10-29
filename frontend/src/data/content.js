@@ -19,7 +19,7 @@ export const content = {
       stats: [
         { number: '200+', label: 'Проектов' },
         { number: '5+', label: 'Лет опыта' },
-        { number: '100%', label: 'Качество' },
+        { number: 'Под ключ', label: 'От идеи до запуска' },
       ],
     },
     services: {
@@ -39,6 +39,7 @@ export const content = {
           ],
           price: 'от 300 BYN (7500 ₽)',
           featured: true,
+          badge: 'Популярно',
         },
         {
           icon: '⚡',
@@ -146,14 +147,7 @@ export const content = {
       description2:
         'Моя цель — помочь вашему бизнесу стать более эффективным через умную автоматизацию и качественные цифровые продукты. Каждый проект для меня — это возможность создать что-то действительно полезное и красивое.',
       skillsTitle: 'Технологии, которые я использую:',
-      skills: [
-        { name: 'Python', level: 95 },
-        { name: 'JavaScript', level: 90 },
-        { name: 'Telegram API', level: 98 },
-        { name: 'HTML/CSS', level: 95 },
-        { name: 'React', level: 85 },
-        { name: 'PostgreSQL', level: 80 },
-      ],
+      skills: ['Python', 'aiogram', 'Telethon', 'asyncio', 'FastAPI', 'Telegram API', 'JavaScript', 'React', 'HTML/CSS', 'PostgreSQL', 'SQLite', 'Redis', 'Selenium'],
     },
     contact: {
       title: 'Готовы начать проект?',
@@ -199,7 +193,7 @@ export const content = {
       stats: [
         { number: '200+', label: 'Projects' },
         { number: '5+', label: 'Years' },
-        { number: '100%', label: 'Quality' },
+        { number: 'End-to-end', label: 'From idea to launch' },
       ],
     },
     services: {
@@ -214,6 +208,7 @@ export const content = {
           features: ['CRM integrations', 'Sales automation', 'Notification system', 'Analytics and reporting'],
           price: 'from $100',
           featured: true,
+          badge: 'Popular',
         },
         {
           icon: '⚡',
@@ -311,14 +306,7 @@ export const content = {
       description2:
         'My goal is to make your business more efficient through smart automation and high-quality software. Every project is a chance to build something truly useful and polished.',
       skillsTitle: 'Technologies I use:',
-      skills: [
-        { name: 'Python', level: 95 },
-        { name: 'JavaScript', level: 90 },
-        { name: 'Telegram API', level: 98 },
-        { name: 'HTML/CSS', level: 95 },
-        { name: 'React', level: 85 },
-        { name: 'PostgreSQL', level: 80 },
-      ],
+      skills: ['Python', 'aiogram', 'Telethon', 'asyncio', 'FastAPI', 'Telegram API', 'JavaScript', 'React', 'HTML/CSS', 'PostgreSQL', 'SQLite', 'Redis', 'Selenium'],
     },
     contact: {
       title: 'Ready to start a project?',

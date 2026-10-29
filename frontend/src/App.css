@@ -262,3 +262,5 @@
     padding: 0.65rem 0.25rem !important;
   }
 }
+
+.skills-tags{margin-top:1rem;gap:.6rem}.skills-tags .tech-tag{font-size:.9rem;padding:.4rem .9rem}

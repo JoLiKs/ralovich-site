@@ -155,7 +155,7 @@ function App() {
                 <div className="window-title">bot.py</div>
               </div>
               <div className="window-content">
-                <div className="code-line"><span className="code-keyword">from</span> <span className="code-module">aiogram</span> <span className="code-keyword">import</span> <span className="code-class">Bot</span>, <span className="code-class">Dispatcher</span></div>
+                <div className="code-line"><span className="code-keyword">from</span> <span className="code-module">aiogram</span> <span className="code-keyword">import</span> <span className="code-class">Bot</span>, <span className="code-class">Dispatcher</span>, <span className="code-class">F</span></div>
                 <div className="code-line"><span className="code-variable">bot</span> <span className="code-dot">=</span> <span className="code-class">Bot</span><span className="code-bracket">(</span><span className="code-param">token</span><span className="code-dot">=</span><span className="code-string">"..."</span><span className="code-bracket">)</span></div>
                 <div className="code-line"><span className="code-variable">dp</span> <span className="code-dot">=</span> <span className="code-class">Dispatcher</span><span className="code-bracket">()</span></div>
                 <div className="code-line"><span className="code-deccorator">@dp.message</span><span className="code-bracket">(</span><span className="code-class">F</span><span className="code-dot">.</span><span className="code-param">text</span> <span className="code-dot">==</span> <span className="code-string">"/start"</span><span className="code-bracket">)</span></div>
@@ -176,7 +176,7 @@ function App() {
           <div className="services-grid">
             {t.services.items.map((service) => (
               <motion.div key={service.title} className={`service-card ${service.featured ? 'featured' : ''}`} whileHover={{ y: -6 }}>
-                {service.featured && <div className="service-badge">Popular</div>}
+                {service.featured && <div className="service-badge">{service.badge}</div>}
                 <div className="service-icon">{service.icon}</div>
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>
@@ -229,13 +229,8 @@ function App() {
             <p className="about-description">{t.about.description2}</p>
             <div className="about-skills">
               <h3>{t.about.skillsTitle}</h3>
-              <div className="skills-grid">
-                {t.about.skills.map((skill) => (
-                  <div className="skill-item" key={skill.name}>
-                    <div className="skill-header"><span className="skill-name">{skill.name}</span><span className="skill-percentage">{skill.level}%</span></div>
-                    <div className="skill-bar"><div className="skill-progress" style={{ width: `${skill.level}%` }} /></div>
-                  </div>
-                ))}
+              <div className="portfolio-technologies skills-tags">
+                {t.about.skills.map((skill) => <span className="tech-tag" key={skill}>{skill}</span>)}
               </div>
             </div>
           </div>
