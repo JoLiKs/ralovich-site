@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { content, GA_ID } from './data/content.js'
+import ProjectCarousel, { buildCards } from './components/ProjectCarousel.jsx'
 import './App.css'
 
 const filterKeys = ['all', 'saas', 'automation']
@@ -221,6 +222,7 @@ function App() {
             ))}
           </div>
         </div>
+        <div className="container"><ProjectCarousel title={t.portfolio.carousel.title} cards={buildCards(t.portfolio)} /></div>
       </section>
 
       <section className="section" id="about">

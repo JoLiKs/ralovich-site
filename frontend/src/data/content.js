@@ -24,7 +24,7 @@ export const content = {
     },
     services: {
       "title": "Мои услуги",
-      "subtitle": "Backend, SaaS и автоматизация — от идеи до работающего продукта",
+      "subtitle": "Backend, SaaS и автоматизация – от идеи до работающего продукта",
       "items": [
         {
           "icon": "🚀",
@@ -57,9 +57,9 @@ export const content = {
         {
           "icon": "📱",
           "title": "Мобильные приложения на Flutter",
-          "description": "Приложения под Android и iOS из одного кода — в связке с вашим backend и админкой.",
+          "description": "Приложения под Android и iOS из одного кода – в связке с вашим backend и админкой.",
           "features": [
-            "Один код — Android и iOS",
+            "Один код – Android и iOS",
             "Работа с GPS и камерой",
             "Офлайн-режим и синхронизация",
             "Push-уведомления (FCM)"
@@ -84,6 +84,8 @@ export const content = {
         "live": "Открыть тренажёр",
         "featured": "Избранное"
       },
+      "carousel": { "title": "Проекты в работе", "projectLabel": "Проект в работе", "noLink": "Под NDA" },
+      "testimonials": [],
       "items": [
           {
             "icon": "🚚",
@@ -113,7 +115,7 @@ export const content = {
           "problem": "Подготовиться к техническому собеседованию сложно без живой практики с интервьюером.",
           "solution": "Веб-симулятор технического интервью: диалог с AI-рекрутером по выбранному стеку и грейду с вердиктом в конце.",
           "features": [
-            "Выбор языка (RU / EN), стека и грейда — от Intern до Lead",
+            "Выбор языка (RU / EN), стека и грейда – от Intern до Lead",
             "Живой диалог с AI-рекрутером через Cursor API",
             "Итоговый вердикт HIRE / REJECT",
             "Админка: ключ API, список сессий, блокировка по IP"
@@ -131,9 +133,9 @@ export const content = {
         },
         {
           "icon": "🌱",
-          "title": "«Второй старт» — HR-платформа",
+          "title": "«Второй старт» – HR-платформа",
           "category": "saas",
-          "problem": "Людям после длительного перерыва (декрет, уход за близкими, лечение) трудно вернуться на рынок труда, а работодателям — найти таких кандидатов.",
+          "problem": "Людям после длительного перерыва (декрет, уход за близкими, лечение) трудно вернуться на рынок труда, а работодателям – найти таких кандидатов.",
           "solution": "Платформа с кабинетами соискателя и рекрутера: вакансии, отклики, интервью и воронка найма в одном сервисе.",
           "features": [
             "Регистрация, вход и восстановление пароля (JWT)",
@@ -197,7 +199,7 @@ export const content = {
         },
         {
           "icon": "📈",
-          "title": "PulseWatch — мониторинг доступности",
+          "title": "PulseWatch – мониторинг доступности",
           "category": "automation",
           "problem": "Нужно регулярно проверять доступность HTTP-сервисов и считать SLA.",
           "solution": "Асинхронный монитор: параллельные проверки эндпоинтов и отчёты по SLA.",
@@ -238,9 +240,9 @@ export const content = {
     about: {
       title: 'Обо мне',
       description:
-        'Привет! Я Егор Ралович — разработчик с более чем 5-летним опытом создания цифровых решений. Специализируюсь на backend-разработке, SaaS-платформах и автоматизации бизнес-процессов.',
+        'Привет! Я Егор Ралович – разработчик с более чем 5-летним опытом создания цифровых решений. Специализируюсь на backend-разработке, SaaS-платформах и автоматизации бизнес-процессов.',
       description2:
-        'Моя цель — помочь вашему бизнесу стать более эффективным через умную автоматизацию и качественные цифровые продукты. Каждый проект для меня — это возможность создать что-то действительно полезное и красивое.',
+        'Моя цель – помочь вашему бизнесу стать более эффективным через умную автоматизацию и качественные цифровые продукты. Каждый проект для меня – это возможность создать что-то действительно полезное и красивое.',
       skillsTitle: 'Технологии, которые я использую:',
       skills: ['Python', 'FastAPI', 'Flask', 'asyncio', 'Node.js', 'TypeScript', 'React', 'Flutter', 'PostgreSQL', 'SQLAlchemy', 'Docker', 'Selenium', 'Playwright'],
     },
@@ -293,7 +295,7 @@ export const content = {
     },
     services: {
       "title": "My services",
-      "subtitle": "Backend, SaaS and automation — from idea to a working product",
+      "subtitle": "Backend, SaaS and automation – from idea to a working product",
       "items": [
         {
           "icon": "🚀",
@@ -353,6 +355,8 @@ export const content = {
         "live": "Open trainer",
         "featured": "Featured"
       },
+      "carousel": { "title": "Projects in progress", "projectLabel": "Project in progress", "noLink": "Under NDA" },
+      "testimonials": [],
       "items": [
           {
             "icon": "🚚",
@@ -382,7 +386,7 @@ export const content = {
           "problem": "Preparing for a technical interview is hard without live practice with an interviewer.",
           "solution": "A web simulator of a technical interview: a dialogue with an AI recruiter for the chosen stack and level, with a verdict at the end.",
           "features": [
-            "Language (RU / EN), stack and level — from Intern to Lead",
+            "Language (RU / EN), stack and level – from Intern to Lead",
             "Live dialogue with an AI recruiter via Cursor API",
             "Final verdict: HIRE / REJECT",
             "Admin: API key, session list, IP blocking"
@@ -400,7 +404,7 @@ export const content = {
         },
         {
           "icon": "🌱",
-          "title": "“Second Start” — HR platform",
+          "title": "“Second Start” – HR platform",
           "category": "saas",
           "problem": "People returning after a long break (parental leave, caregiving, treatment) struggle to re-enter the job market, and employers struggle to find them.",
           "solution": "A platform with candidate and recruiter dashboards: vacancies, applications, interviews and hiring funnel in one service.",
@@ -466,7 +470,7 @@ export const content = {
         },
         {
           "icon": "📈",
-          "title": "PulseWatch — uptime monitoring",
+          "title": "PulseWatch – uptime monitoring",
           "category": "automation",
           "problem": "HTTP services need regular availability checks and SLA calculation.",
           "solution": "An async monitor: concurrent endpoint checks and SLA reports.",
@@ -507,7 +511,7 @@ export const content = {
     about: {
       title: 'About me',
       description:
-        'Hi! I am Egor Ralovich — a developer with 5+ years of experience building digital products. I specialize in backend development, SaaS platforms and business automation.',
+        'Hi! I am Egor Ralovich – a developer with 5+ years of experience building digital products. I specialize in backend development, SaaS platforms and business automation.',
       description2:
         'My goal is to make your business more efficient through smart automation and high-quality software. Every project is a chance to build something truly useful and polished.',
       skillsTitle: 'Technologies I use:',
