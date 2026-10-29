@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { content, GA_ID } from './data/content.js'
 import ProjectCarousel, { buildCards } from './components/ProjectCarousel.jsx'
+import ProjectCard from './components/ProjectCard.jsx'
+import { cardMeta, cardCopy } from './data/portfolioCards.js'
 import './App.css'
 
 const filterKeys = ['all', 'saas', 'automation']
@@ -202,23 +204,9 @@ function App() {
               </button>
             ))}
           </div>
-          <div className="portfolio-grid">
-            {portfolioItems.map((item, index) => (
-              <motion.article key={item.title} className={`portfolio-item ${index < 3 ? 'featured' : ''}`} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <div className="portfolio-image">
-                  {index < 3 && <span className="portfolio-badge">{t.portfolio.labels.featured}</span>}
-                  <span>{item.icon}</span>
-                </div>
-                <div className="portfolio-content">
-                  <h3 className="portfolio-title">{item.title}</h3>
-                  <p className="portfolio-description"><strong className="portfolio-label">{t.portfolio.labels.problem}:</strong> {item.problem}</p>
-                  <p className="portfolio-description"><strong className="portfolio-label">{t.portfolio.labels.solution}:</strong> {item.solution}</p>
-                  <ul className="portfolio-features">{item.features.map((f) => <li key={f}>{f}</li>)}</ul>
-                  <div className="portfolio-technologies">{item.technologies.map((tech) => <span className="tech-tag" key={tech}>{tech}</span>)}</div>
-                  {item.liveLink && <a className="btn btn-primary portfolio-live" href={item.liveLink} target="_blank" rel="noreferrer">{t.portfolio.labels.live} ↗</a>}
-                  {item.link && <a className="portfolio-link" href={item.link} target="_blank" rel="noreferrer">{t.portfolio.labels.link} →</a>}
-                </div>
-              </motion.article>
+          <div className="pgrid">
+            {portfolioItems.map((item) => (
+              <ProjectCard key={item.id} item={item} meta={cardMeta[item.id]} copy={cardCopy[lang][item.id]} labels={t.portfolio.labels} />
             ))}
           </div>
         </div>

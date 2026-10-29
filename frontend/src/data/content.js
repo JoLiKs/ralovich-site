@@ -88,7 +88,7 @@ export const content = {
       "testimonials": [],
       "items": [
           {
-            "icon": "🚚",
+            "id": "delivery", "icon": "🚚",
             "title": "Платформа для службы доставки",
             "category": "saas",
             "problem": "Службе доставки нужна единая система для приёма заказов, управления курьерами и отслеживания доставок.",
@@ -109,7 +109,7 @@ export const content = {
             ]
           },
         {
-          "icon": "🎤",
+          "id": "interview", "icon": "🎤",
           "title": "Тренажёр по собеседованиям",
           "category": "saas",
           "problem": "Подготовиться к техническому собеседованию сложно без живой практики с интервьюером.",
@@ -132,7 +132,7 @@ export const content = {
           "liveLink": "https://ralovich.com/conversation/"
         },
         {
-          "icon": "🌱",
+          "id": "vtoroy", "icon": "🌱",
           "title": "«Второй старт» – HR-платформа",
           "category": "saas",
           "problem": "Людям после длительного перерыва (декрет, уход за близкими, лечение) трудно вернуться на рынок труда, а работодателям – найти таких кандидатов.",
@@ -154,7 +154,7 @@ export const content = {
           "link": "https://github.com/JoLiKs/vtoroy-start"
         },
         {
-          "icon": "🛠️",
+          "id": "devorch", "icon": "🛠️",
           "title": "Dev Orchestrator",
           "category": "automation",
           "problem": "Работа с репозиториями, правками кода и деплоем на разные серверы требовала переключения между множеством инструментов.",
@@ -175,7 +175,7 @@ export const content = {
           ]
         },
         {
-          "icon": "📊",
+          "id": "crypto", "icon": "📊",
           "title": "Crypto Arbitrage Finder",
           "category": "automation",
           "problem": "Нужно быстро сравнивать цены криптовалют на разных биржах и видеть арбитражные возможности.",
@@ -198,7 +198,7 @@ export const content = {
           "link": "https://github.com/JoLiKs/Crypto-Arbitrage-Finder"
         },
         {
-          "icon": "📈",
+          "id": "pulse", "icon": "📈",
           "title": "PulseWatch – мониторинг доступности",
           "category": "automation",
           "problem": "Нужно регулярно проверять доступность HTTP-сервисов и считать SLA.",
@@ -216,24 +216,6 @@ export const content = {
             "pytest"
           ],
           "link": "https://github.com/JoLiKs/pulsewatch"
-        },
-        {
-          "icon": "🌐",
-          "title": "Автоматизация действий в браузере",
-          "category": "automation",
-          "problem": "Ответы на входящие сообщения на площадке объявлений отнимали время вручную.",
-          "solution": "Скрипт, который сам заходит в аккаунт, находит непрочитанные чаты и отвечает в них.",
-          "features": [
-            "Вход по сохранённым cookies",
-            "Поиск непрочитанных чатов",
-            "Человекоподобный ввод и прокрутка",
-            "undetected-chromedriver"
-          ],
-          "technologies": [
-            "Python",
-            "Selenium",
-            "undetected-chromedriver"
-          ]
         }
       ]
     },
@@ -359,7 +341,7 @@ export const content = {
       "testimonials": [],
       "items": [
           {
-            "icon": "🚚",
+            "id": "delivery", "icon": "🚚",
             "title": "Delivery service platform",
             "category": "saas",
             "problem": "A delivery service needed one system for order intake, courier management and delivery tracking.",
@@ -380,7 +362,7 @@ export const content = {
             ]
           },
         {
-          "icon": "🎤",
+          "id": "interview", "icon": "🎤",
           "title": "Interview trainer",
           "category": "saas",
           "problem": "Preparing for a technical interview is hard without live practice with an interviewer.",
@@ -403,7 +385,7 @@ export const content = {
           "liveLink": "https://ralovich.com/conversation/"
         },
         {
-          "icon": "🌱",
+          "id": "vtoroy", "icon": "🌱",
           "title": "“Second Start” – HR platform",
           "category": "saas",
           "problem": "People returning after a long break (parental leave, caregiving, treatment) struggle to re-enter the job market, and employers struggle to find them.",
@@ -425,7 +407,7 @@ export const content = {
           "link": "https://github.com/JoLiKs/vtoroy-start"
         },
         {
-          "icon": "🛠️",
+          "id": "devorch", "icon": "🛠️",
           "title": "Dev Orchestrator",
           "category": "automation",
           "problem": "Working with repos, code changes and deploys to several servers meant switching between many tools.",
@@ -446,7 +428,7 @@ export const content = {
           ]
         },
         {
-          "icon": "📊",
+          "id": "crypto", "icon": "📊",
           "title": "Crypto Arbitrage Finder",
           "category": "automation",
           "problem": "Quickly compare crypto prices across exchanges and spot arbitrage opportunities.",
@@ -469,7 +451,7 @@ export const content = {
           "link": "https://github.com/JoLiKs/Crypto-Arbitrage-Finder"
         },
         {
-          "icon": "📈",
+          "id": "pulse", "icon": "📈",
           "title": "PulseWatch – uptime monitoring",
           "category": "automation",
           "problem": "HTTP services need regular availability checks and SLA calculation.",
@@ -487,24 +469,6 @@ export const content = {
             "pytest"
           ],
           "link": "https://github.com/JoLiKs/pulsewatch"
-        },
-        {
-          "icon": "🌐",
-          "title": "Browser automation",
-          "category": "automation",
-          "problem": "Replying to incoming messages on a classifieds site took manual time.",
-          "solution": "A script that logs in, finds unread chats and replies to them.",
-          "features": [
-            "Login via saved cookies",
-            "Finding unread chats",
-            "Human-like typing and scrolling",
-            "undetected-chromedriver"
-          ],
-          "technologies": [
-            "Python",
-            "Selenium",
-            "undetected-chromedriver"
-          ]
         }
       ]
     },
