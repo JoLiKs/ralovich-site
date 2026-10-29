@@ -13,6 +13,16 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [filter, setFilter] = useState('all')
+  const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'dark')
+  useEffect(() => {
+    const root = document.documentElement
+    root.classList.add('theme-anim')
+    root.dataset.theme = theme
+    localStorage.setItem('theme', theme)
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'light' ? '#f7f7fb' : '#0a0a0a')
+    const id = setTimeout(() => root.classList.remove('theme-anim'), 450)
+    return () => clearTimeout(id)
+  }, [theme])
   const [submitting, setSubmitting] = useState(false)
   const [notice, setNotice] = useState(null)
 
@@ -111,6 +121,10 @@ function App() {
             </div>
 
             <div className="nav-controls">
+              <button type="button" className="theme-toggle" onClick={() => setTheme((v) => (v === 'light' ? 'dark' : 'light'))} aria-label={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'} title={theme === 'light' ? 'Dark' : 'Light'}>
+                <svg className="ti-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" /><g strokeLinecap="round"><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></g></svg>
+                <svg className="ti-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z" /></svg>
+              </button>
               <div className="language-switcher">
                 <button type="button" className={`lang-btn ${lang === 'ru' ? 'active' : ''}`} onClick={() => setLang('ru')}>RU</button>
                 <button type="button" className={`lang-btn ${lang === 'en' ? 'active' : ''}`} onClick={() => setLang('en')}>EN</button>

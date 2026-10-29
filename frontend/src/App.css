@@ -360,3 +360,104 @@
 .v-term .spark i{flex:1;background:var(--accent);opacity:.75;border-radius:2px 2px 0 0}
 @media (max-width:860px){.pgrid{grid-template-columns:1fr}.pcard.wide{grid-column:auto;flex-direction:column!important}.pcard.wide .pcard-visual{min-height:220px;flex-basis:auto}.pcard.wide .pcard-title{font-size:1.4rem}}
 @media (prefers-reduced-motion:reduce){.pcard,.pcard:hover{transform:none}.v-route path{animation:none}}
+
+/* Theme toggle */
+.theme-toggle{position:relative;width:40px;height:40px;border-radius:50%;border:1px solid #ffffff33;background:#ffffff0d;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .3s,border-color .3s,transform .2s}
+.theme-toggle:hover{transform:rotate(15deg);background:#ffffff1a}
+.theme-toggle svg{position:absolute;fill:none;stroke:currentColor;stroke-width:2;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .3s}
+.ti-moon{fill:currentColor!important;stroke:none!important}
+.ti-sun circle{fill:currentColor}
+[data-theme=dark] .ti-sun,:root:not([data-theme]) .ti-sun{opacity:1;transform:rotate(0) scale(1)}
+[data-theme=dark] .ti-moon,:root:not([data-theme]) .ti-moon{opacity:0;transform:rotate(-90deg) scale(.4)}
+[data-theme=light] .ti-sun{opacity:0;transform:rotate(90deg) scale(.4)}
+[data-theme=light] .ti-moon{opacity:1;transform:rotate(0) scale(1)}
+.theme-anim,.theme-anim *,.theme-anim *:before,.theme-anim *:after{transition:background-color .4s ease,color .4s ease,border-color .4s ease,box-shadow .4s ease,fill .4s ease!important}
+
+/* Light theme */
+[data-theme=light]{--background-dark:#f6f6fa;--text-light:#14141c;--text-muted:#4a4a5c;--border-color:#14141c1a;--shadow:0 10px 30px #1a1a3a12;--shadow-lg:0 20px 50px #1a1a3a1f;color-scheme:light}
+[data-theme=light] body{background:#f6f6fa;color:#14141c}
+[data-theme=light] .header{background:#ffffffd9;border-bottom-color:#14141c14}
+[data-theme=light] .header.scrolled{background:#fffffff2;box-shadow:0 2px 20px #1a1a3a12}
+[data-theme=light] .logo-text,[data-theme=light] .nav-logo{color:#14141c}
+[data-theme=light] .nav-link{color:#14141cb3}
+[data-theme=light] .nav-link:hover{color:#14141c}
+[data-theme=light] .nav-toggle span{background:#14141c}
+[data-theme=light] .lang-btn{border-color:#14141c33;color:#14141cb3}
+[data-theme=light] .lang-btn.active,[data-theme=light] .lang-btn:hover{color:#fff}
+[data-theme=light] .theme-toggle{border-color:#14141c26;background:#14141c08;color:#3b3b8f}
+[data-theme=light] .theme-toggle:hover{background:#14141c12}
+@media (max-width:768px){[data-theme=light] .nav-menu{background:#fffffffa}[data-theme=light] .nav-link{background:#14141c08;border-color:#14141c1a}[data-theme=light] .nav-link:hover{background:#14141c12}}
+[data-theme=light] .nav-menu{background:#fffffffa}
+[data-theme=light] .hero{background:linear-gradient(135deg,#f7f7fb,#eceefe 50%,#f3ecfb)}
+[data-theme=light] .hero-content,[data-theme=light] .hero-title{color:#14141c}
+[data-theme=light] .hero-background{filter:invert(1);opacity:.5}
+[data-theme=light] .btn-secondary{background:#ffffffb3;border-color:#14141c26;color:#14141c}
+[data-theme=light] .btn-secondary:hover{background:#fff}
+[data-theme=light] .stat{background:#ffffffb3;border-color:#14141c14;box-shadow:0 6px 20px #1a1a3a0d}
+[data-theme=light] .stat-label{color:#4a4a5c}
+[data-theme=light] .floating-icon{background:#ffffffcc;border-color:#14141c1a;box-shadow:0 6px 18px #1a1a3a14}
+[data-theme=light] .code-window{box-shadow:0 25px 60px #1a1a3a33}
+[data-theme=light] .section{background:transparent}
+[data-theme=light] .section:nth-of-type(even){background:#eef0f8}
+[data-theme=light] .section-title,[data-theme=light] h2,[data-theme=light] h3{color:#14141c}
+[data-theme=light] .section-subtitle,[data-theme=light] .about-description{color:#4a4a5c}
+[data-theme=light] .service-card{background:#fff;border-color:#14141c14;box-shadow:0 8px 30px #1a1a3a0d;color:#14141c}
+[data-theme=light] .service-card:hover{border-color:#667eea66;box-shadow:0 16px 40px #667eea26}
+[data-theme=light] .service-description,[data-theme=light] .service-features li{color:#4a4a5c}
+[data-theme=light] .service-price{color:#3b3b8f}
+[data-theme=light] .filter-btn{background:#fff;border-color:#14141c1f;color:#14141cb3}
+[data-theme=light] .filter-btn.active,[data-theme=light] .filter-btn:hover{color:#fff}
+[data-theme=light] .tech-tag{background:#667eea14;border-color:#667eea33;color:#3b3b8f}
+[data-theme=light] .avatar{box-shadow:0 20px 50px #1a1a3a26}
+/* portfolio cards */
+[data-theme=light] .pcard{background:#fff;border-color:#14141c14;color:#14141c;box-shadow:0 8px 30px #1a1a3a0f}
+[data-theme=light] .pcard:hover{box-shadow:0 18px 50px -12px color-mix(in srgb,var(--accent) 55%,transparent)}
+[data-theme=light] .pcard-title{color:#14141c}
+[data-theme=light] .pcard-tagline{color:#2b2b38}
+[data-theme=light] .pcard-hl li{color:#4a4a5c}
+[data-theme=light] .pcard-kicker{color:color-mix(in srgb,var(--accent) 65%,#000)}
+[data-theme=light] .pcard-tags span{color:#4a4a5c;border-color:#14141c1f}
+[data-theme=light] .pcard-gh{color:#14141c}
+[data-theme=light] .pcard-nda{color:#4a4a5c;border-color:#14141c40}
+[data-theme=light] .pcard-visual{background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 22%,#fff),#f4f4f8 80%);border-color:#14141c0f}
+[data-theme=light] .v-phone{background:#fff;border-color:#14141c26;box-shadow:0 18px 36px #1a1a3a26}
+[data-theme=light] .v-phone-bar,[data-theme=light] .v-row{background:#14141c1a}
+[data-theme=light] .v-scan{color:#14141c99}
+[data-theme=light] .v-pill{color:color-mix(in srgb,var(--accent) 60%,#000)}
+[data-theme=light] .v-chat .l{background:#fff;color:#14141c;box-shadow:0 2px 8px #1a1a3a14}
+[data-theme=light] .v-chat .r{background:color-mix(in srgb,var(--accent) 30%,#fff);color:#0f2a33}
+[data-theme=light] .v-kanban .col{background:#ffffffb3}
+[data-theme=light] .v-kanban span{color:#4a4a5c}
+[data-theme=light] .v-kanban i{background:#14141c14}
+[data-theme=light] .v-kanban i.drag{background:var(--accent);box-shadow:0 8px 16px #1a1a3a33}
+[data-theme=light] .v-tg .m{background:#fff;color:#14141c;box-shadow:0 2px 8px #1a1a3a14}
+[data-theme=light] .v-tg .me{background:color-mix(in srgb,var(--accent) 35%,#fff)}
+[data-theme=light] .v-tg .ok{color:color-mix(in srgb,var(--accent) 60%,#000)}
+[data-theme=light] .v-ex b{color:#2b2b38}
+[data-theme=light] .v-ex .spread{color:color-mix(in srgb,var(--accent) 55%,#000);border-color:currentColor}
+[data-theme=light] .v-term{background:#14141c;border-color:#14141c}
+/* carousel */
+[data-theme=light] .pc-heading{color:#14141c}
+[data-theme=light] .pc-card{background:#fff;border-color:#14141c14;color:#14141c;box-shadow:0 6px 24px #1a1a3a0d}
+[data-theme=light] .pc-quote{color:#14141c12}
+[data-theme=light] .pc-avatar{background:#eceefe;border-color:#667eea33;color:#3b3b8f}
+[data-theme=light] .pc-sub,[data-theme=light] .pc-date{color:#14141c80}
+[data-theme=light] .pc-stars{color:#c28a00}
+[data-theme=light] .pc-text{color:#2b2b38}
+[data-theme=light] .pc-project{background:#f6f6fa;border-color:#14141c14;color:#14141c}
+[data-theme=light] .pc-plabel{color:#14141c80}
+[data-theme=light] .pc-arrow{border-color:#14141c26}
+/* forms & contact */
+[data-theme=light] .form{background:#fff;border-color:#14141c14;box-shadow:0 10px 30px #1a1a3a0d}
+[data-theme=light] .form-group label{background:#fff;color:#6a6a7c}
+[data-theme=light] .form-group-select label{background:transparent;color:#14141c}
+[data-theme=light] .form-group input,[data-theme=light] .form-group textarea,[data-theme=light] .form-group select{background:#f6f6fa;border-color:#14141c1f;color:#14141c}
+[data-theme=light] .form-group input:focus,[data-theme=light] .form-group textarea:focus,[data-theme=light] .form-group select:focus{background:#fff}
+[data-theme=light] .form-group select option{background:#fff;color:#14141c}
+[data-theme=light] .contact-item{background:#fff;border-color:#14141c14}
+[data-theme=light] .contact-details h3{color:#14141c}
+[data-theme=light] .footer{background:#eceef6;border-top-color:#14141c14}
+[data-theme=light] .footer-logo{color:#14141c}
+[data-theme=light] .social-link{background:#14141c0d;color:#14141c}
+[data-theme=light] .social-link:hover{color:#fff}
+[data-theme=light] ::-webkit-scrollbar-track{background:#14141c0d}
